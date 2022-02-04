@@ -79,7 +79,7 @@ public class CursosController {
     @PutMapping (value = "curso", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Curso> UpdateCurso(@RequestBody Curso curso) {
         for (int i = 0; i < this.list_cursos.size(); i++) {
-            if (this.list_cursos.get(i).getNombre().equals(curso.getNombre())
+            if (this.list_cursos.get(i).getNombre().equals(curso.getNombre()))
                 list_cursos.set(i, curso);   
         }
         return this.list_cursos;
